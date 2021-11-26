@@ -74,9 +74,9 @@ async def rename_cb(bot, update):
     
     await bot.send_message(
         chat_id=update.chat.id,
-        text="<b>File Name</b> : <code>{}</code> \n\nSelect the desired option below 😇".format(filename),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="📝 RENAME 📝", callback_data="rename_button")],
-                                                [InlineKeyboardButton(text="✖️ CANCEL ✖️", callback_data="cancel_e")]]),
+        text="<b>File Name</b> : <code>{}</code> \n\n𝗧𝗮𝗽 𝗼𝗻 𝗥𝗲𝗻𝗮𝗺𝗲 𝗯𝘂𝘁𝘁𝗼𝗻 𝘁𝗼 𝗿𝗲𝗻𝗮𝗺𝗲 𝘆𝗼𝘂𝗿 𝗳𝗶𝗹𝗲. ✍️".format(filename),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="𝗥𝗘𝗡𝗔𝗠𝗘 ✍️", callback_data="rename_button")],
+                                                [InlineKeyboardButton(text="𝗖𝗔𝗡𝗖𝗟𝗘 ❌", callback_data="cancel_e")]]),
         parse_mode="html",
         reply_to_message_id=update.message_id,
         disable_web_page_preview=True   
@@ -87,5 +87,5 @@ async def cancel_extract(bot, update):
     
     await bot.send_message(
         chat_id=update.chat.id,
-        text="Process Cancelled 🙃",
+        text="𝗬𝗼𝘂 𝗰𝗮𝗻𝗰𝗹𝗲𝗱 𝘁𝗵𝗲 𝗽𝗿𝗼𝗰𝗲𝘀𝘀.",
     )
