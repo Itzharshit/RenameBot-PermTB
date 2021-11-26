@@ -32,7 +32,7 @@ async def force_name(bot, message):
 
     await bot.send_message(
         message.reply_to_message.from_user.id,
-        "Enter new name for media\n\nNote : Extension not required",
+        "𝘗𝘭𝘦𝘢𝘴𝘦 𝘴𝘶𝘣𝘮𝘪𝘵 𝘺𝘰𝘶𝘳 𝘧𝘪𝘭𝘦 𝘯𝘢𝘮𝘦.\n\n𝗡𝗼𝘁𝗲 : 𝘗𝘭𝘦𝘢𝘴𝘦 𝘦𝘹𝘤𝘭𝘶𝘥𝘦 𝘧𝘪𝘭𝘦 𝘦𝘹𝘵𝘦𝘯𝘴𝘪𝘰𝘯.",
         reply_to_message_id=message.reply_to_message.message_id,
         reply_markup=ForceReply(True)
     )
@@ -44,7 +44,7 @@ async def cus_name(bot, message):
     if (message.reply_to_message.reply_markup) and isinstance(message.reply_to_message.reply_markup, ForceReply):
         asyncio.create_task(rename_doc(bot, message))     
     else:
-        print('No media present')
+        print('𝗙𝗶𝗹𝗲 𝗻𝗼𝘁 𝗱𝗲𝘁𝗲𝗰𝘁𝗲𝗱.')
 
     
 async def rename_doc(bot, message):
@@ -58,7 +58,7 @@ async def rename_doc(bot, message):
 
     
     if media.empty:
-        await message.reply_text('Why did you delete that 😕', True)
+        await message.reply_text('𝙊𝙤𝙥𝙨! 𝙮𝙤𝙪 𝙙𝙚𝙡𝙚𝙩𝙚𝙙 𝙩𝙝𝙖𝙩.', True)
         return
         
     filetype = media.document or media.video or media.audio or media.voice or media.video_note
@@ -181,7 +181,7 @@ async def rename_doc(bot, message):
     else:
         await bot.send_message(
             chat_id=message.chat.id,
-            text="You're B A N N E D",
+            text="𝐆𝐞𝐭 𝐨𝐮𝐭!",
             reply_to_message_id=message.message_id
         )
 
